@@ -157,49 +157,7 @@ const orders = [
     items: 1,
     paymentMethod: "Google Pay",
     shippingAddress: "258 Spruce Ave, Denver, CO 80201",
-  },
-  {
-    id: "ORD-008",
-    customer: {
-      name: "James Rodriguez",
-      email: "james.rodriguez@email.com",
-      avatar: "/placeholder.svg?height=32&width=32",
-    },
-    date: "2024-01-08",
-    status: "shipped",
-    amount: 79.0,
-    items: 1,
-    paymentMethod: "Google Pay",
-    shippingAddress: "258 Spruce Ave, Denver, CO 80201",
-  },
-  {
-    id: "ORD-008",
-    customer: {
-      name: "James Rodriguez",
-      email: "james.rodriguez@email.com",
-      avatar: "/placeholder.svg?height=32&width=32",
-    },
-    date: "2024-01-08",
-    status: "shipped",
-    amount: 79.0,
-    items: 1,
-    paymentMethod: "Google Pay",
-    shippingAddress: "258 Spruce Ave, Denver, CO 80201",
-  },
-  {
-    id: "ORD-008",
-    customer: {
-      name: "James Rodriguez",
-      email: "james.rodriguez@email.com",
-      avatar: "/placeholder.svg?height=32&width=32",
-    },
-    date: "2024-01-08",
-    status: "shipped",
-    amount: 79.0,
-    items: 1,
-    paymentMethod: "Google Pay",
-    shippingAddress: "258 Spruce Ave, Denver, CO 80201",
-  },
+  }
 ]
 
 const statusConfig = {
@@ -210,7 +168,7 @@ const statusConfig = {
   cancelled: { label: "Cancelled", variant: "destructive" as const, icon: XCircle, color: "text-red-600" },
 }
 
-const ITEMS_PER_PAGE = 10
+const ITEMS_PER_PAGE = 5
 
 export function OrdersContent() {
   const [searchTerm, setSearchTerm] = useState("")

@@ -10,11 +10,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 
-interface LoginPageProps {
-  onLogin: () => void
-}
 
-export default function LoginPage({ onLogin }: LoginPageProps) {
+export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [formData, setFormData] = useState({
@@ -31,7 +28,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
     setIsLoading(false)
-    onLogin()
+    // onLogin() // This line was removed as per the edit hint
   }
 
   const handleInputChange = (field: string, value: string | boolean) => {

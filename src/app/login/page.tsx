@@ -7,15 +7,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { z } from "zod" // Zod ni import qilish
+import { z } from "zod"
 
-// Kirish ma'lumotlari uchun Zod sxemasini aniqlash
 const loginSchema = z.object({
   username: z.string().min(3, { message: "Foydalanuvchi nomi kamida 3 ta belgidan iborat bo'lishi kerak." }).trim(),
   password: z.string().min(6, { message: "Parol kamida 6 ta belgidan iborat bo'lishi kerak." }).trim(),
 })
 
-// Define a non-nullable type for the error fields
 type FormErrorFields = { username?: string; password?: string };
 type FormErrors = FormErrorFields | null;
 
@@ -26,14 +24,13 @@ export default function LoginPage() {
     username: "",
     password: "",
   })
-  const [errors, setErrors] = useState<FormErrors>(null) // Xatolarni saqlash uchun holat
+  const [errors, setErrors] = useState<FormErrors>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    setErrors(null) // Har safar yuborishdan oldin xatolarni tozalash
+    setErrors(null)
 
-    // Zod yordamida validatsiya
     const validationResult = loginSchema.safeParse(formData)
 
     if (!validationResult.success) {

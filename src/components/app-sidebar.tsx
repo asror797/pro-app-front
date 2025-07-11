@@ -23,6 +23,7 @@ import {
   LayoutGrid,
   Wallet,
   ShieldUser,
+  Navigation,
 } from "lucide-react"
 
 import {
@@ -44,32 +45,32 @@ const data = {
   navMain: [
     {
       title: "Boshqaruv paneli",
-      url: "/",
+      url: "/dashboard",
       icon: LayoutDashboard,
     },
     {
       title: "So‘rovlar",
-      url: "#",
+      url: "/dashboard/request",
       icon: Inbox,
     },
     {
       title: "Yo'lovchilar",
-      url: "/pending-approvals",
+      url: "/dashboard/passenger",
       icon: Users,
     },
     {
       title: "Haydovchilar",
-      url: "/tasks",
+      url: "/dashboard/driver",
       icon: Users,
     },
     {
       title: "Rejalashtirilgan postlar",
-      url: "/leaderboard",
+      url: "/dashboard/ride",
       icon: Clock,
     },
     {
       title: " Telegram guruhlar",
-      url: "/workflows",
+      url: "/dashboard/group",
       icon: MessageCircle,
     },
     {
@@ -78,9 +79,9 @@ const data = {
       icon: Wallet,
     },
     {
-      title: " Points & Rewards",
-      url: "#",
-      icon: Building2,
+      title: "Regionlar",
+      url: "/dashboard/region",
+      icon: Navigation,
     },
     {
       title: "Manage Requests",
@@ -89,7 +90,7 @@ const data = {
     },
     {
       title: "Instansiyalar",
-      url: "#",
+      url: "/dashboard/instance",
       icon: Bot,
     },
     {

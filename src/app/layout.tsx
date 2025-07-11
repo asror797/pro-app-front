@@ -1,4 +1,3 @@
-import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -6,8 +5,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Dashboard App",
-  description: "A modern dashboard built with Next.js",
+  title: "My App",
+  description: "A Next.js application with login and dashboard",
 }
 
 export default function RootLayout({

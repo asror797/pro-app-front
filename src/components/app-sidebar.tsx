@@ -2,28 +2,23 @@
 
 import type * as React from "react"
 import {
-  FileText,
-  Home,
   Users,
   Clock,
-  CheckCircle,
   BarChart3,
   Settings,
-  Building2,
-  CheckSquare,
-  Trophy,
-  Workflow,
   LayoutDashboard,
   Inbox,
-  PlusCircle,
   MessageCircle,
-  CreditCard,
   Server,
   Bot,
   LayoutGrid,
   Wallet,
-  ShieldUser,
   Navigation,
+  CarFront,
+  User,
+  Rss,
+  MessageSquareText,
+  Cog,
 } from "lucide-react"
 
 import {
@@ -41,7 +36,6 @@ import {
 } from "@/components/ui/sidebar"
 import Link from "next/link"
 
-// Menu items
 const data = {
   navMain: [
     {
@@ -52,17 +46,17 @@ const data = {
     {
       title: "So‘rovlar",
       url: "/dashboard/request",
-      icon: Inbox,
+      icon: Rss,
     },
     {
       title: "Yo'lovchilar",
       url: "/dashboard/passenger",
-      icon: Users,
+      icon: User,
     },
     {
       title: "Haydovchilar",
       url: "/dashboard/driver",
-      icon: Users,
+      icon: CarFront,
     },
     {
       title: "Rejalashtirilgan postlar",
@@ -72,7 +66,17 @@ const data = {
     {
       title: " Telegram guruhlar",
       url: "/dashboard/group",
-      icon: MessageCircle,
+      icon: MessageSquareText,
+    },
+    {
+      title: "Botlar",
+      url: "#",
+      icon: Bot,
+    },
+    {
+      title: "Workerlar",
+      url: "/dashboard/instance",
+      icon: Server,
     },
     {
       title: "To'lovlar",
@@ -85,19 +89,9 @@ const data = {
       icon: Navigation,
     },
     {
-      title: "Manage Requests",
+      title: "Sozlamalar",
       url: "#",
-      icon: Users,
-    },
-    {
-      title: "Instansiyalar",
-      url: "/dashboard/instance",
-      icon: Bot,
-    },
-    {
-      title: "User botlar",
-      url: "#",
-      icon: Server,
+      icon: Settings,
     },
   ],
   navSecondary: [
@@ -137,7 +131,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <Link href={item.url} > 
-                      <item.icon />
+                      <item.icon size={32} />
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
@@ -147,7 +141,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarGroupContent>
         </SidebarGroup>
         <SidebarGroup>
-          <SidebarGroupLabel>Main Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel>Second Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {data.navSecondary.map((item) => (

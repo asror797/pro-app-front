@@ -2,13 +2,10 @@
 
 import type * as React from "react"
 import {
-  Users,
   Clock,
   BarChart3,
   Settings,
   LayoutDashboard,
-  Inbox,
-  MessageCircle,
   Server,
   Bot,
   LayoutGrid,
@@ -18,7 +15,6 @@ import {
   User,
   Rss,
   MessageSquareText,
-  Cog,
 } from "lucide-react"
 
 import {

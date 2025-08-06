@@ -172,7 +172,7 @@ export default function DriversTable() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 overflow-y-scroll">
       <Card className="rounded-none shadow-none border-none">
         <CardHeader>
           <CardTitle>Driver Management</CardTitle>
